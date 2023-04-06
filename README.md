@@ -2,7 +2,7 @@
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-![preview](public/assets/preview.jpg)
+![preview](public/assets/pre.png)
 
 | ----------------------------------------------------- | :---------------------------------------------------------------- |
 | **6** Demo pages | **50+** demo pages |
