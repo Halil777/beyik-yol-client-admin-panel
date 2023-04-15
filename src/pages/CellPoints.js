@@ -76,7 +76,7 @@ function applySortFilter(array, comparator, query) {
   return stabilizedThis.map((el) => el[0]);
 }
 
-export default function UserPage() {
+export default function CellPoints() {
   const [open, setOpen] = useState(null);
 
   const [page, setPage] = useState(0);
@@ -160,7 +160,7 @@ export default function UserPage() {
   return (
     <>
       <Helmet>
-        <title> User | Minimal UI </title>
+        <title> Söwda Nokatlary | Tm Çat Admin </title>
       </Helmet>
 
       <Container>
@@ -171,13 +171,13 @@ export default function UserPage() {
           mb={5}
         >
           <Typography variant="h4" gutterBottom>
-            User
+            Söwda Nokatlary
           </Typography>
           <Button
             variant="contained"
             startIcon={<Iconify icon="eva:plus-fill" />}
           >
-            New User
+            Söwda Nokat Goşmak
           </Button>
         </Stack>
 

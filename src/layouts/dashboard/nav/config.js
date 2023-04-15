@@ -1,50 +1,53 @@
 // component
-import SvgColor from "../../../components/svg-color";
-
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import StoreIcon from "@mui/icons-material/Store";
+import ChangeHistoryIcon from "@mui/icons-material/ChangeHistory";
+import BlockIcon from "@mui/icons-material/Block";
+import LoginIcon from "@mui/icons-material/Login";
 // ----------------------------------------------------------------------
 
-const icon = (name) => (
-  <SvgColor
-    src={`/assets/icons/navbar/${name}.svg`}
-    sx={{ width: 1, height: 1 }}
-  />
-);
+const icon = (name) => {
+  switch (name) {
+    case "dashboard":
+      return <DashboardIcon />;
+    case "cellPoint":
+      return <StoreIcon />;
+    case "history":
+      return <ChangeHistoryIcon />;
+    case "login":
+      return <LoginIcon />;
+    case "notFound":
+      return <BlockIcon />;
+    default:
+      return null;
+  }
+};
 
 const navConfig = [
   {
     title: "dashboard",
     path: "/dashboard/app",
-    icon: icon("ic_analytics"),
+    icon: icon("dashboard"),
   },
   {
-    title: "user",
-    path: "/dashboard/user",
-    icon: icon("ic_user"),
+    title: "Söwda Nokatlary",
+    path: "/dashboard/cellPoints",
+    icon: icon("cellPoint"),
   },
   {
-    title: "product",
-    path: "/dashboard/products",
-    icon: icon("ic_cart"),
-  },
-  {
-    title: "blog",
-    path: "/dashboard/blog",
-    icon: icon("ic_blog"),
-  },
-  {
-    title: "home",
-    path: "/dashboard/home",
-    icon: icon("ic_blog"),
+    title: "History",
+    path: "/dashboard/history",
+    icon: icon("history"),
   },
   {
     title: "login",
     path: "/login",
-    icon: icon("ic_lock"),
+    icon: icon("login"),
   },
   {
     title: "Not found",
     path: "/404",
-    icon: icon("ic_disabled"),
+    icon: icon("notFound"),
   },
 ];
 
