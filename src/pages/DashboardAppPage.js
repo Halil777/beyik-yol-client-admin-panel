@@ -28,7 +28,9 @@ export default function DashboardAppPage() {
   return (
     <>
       <Helmet>
-        <title> {t("dashboard")}</title>
+        <title>
+          {t("home")} | {t("TmChat")}
+        </title>
       </Helmet>
 
       <Container maxWidth="xl">
@@ -136,16 +138,16 @@ export default function DashboardAppPage() {
               title="Conversion Rates"
               subheader="(+43%) than last year"
               chartData={[
-                { label: "Italy", value: 400 },
-                { label: "Japan", value: 430 },
-                { label: "China", value: 448 },
-                { label: "Canada", value: 470 },
-                { label: "France", value: 540 },
-                { label: "Germany", value: 580 },
-                { label: "South Korea", value: 690 },
-                { label: "Netherlands", value: 1100 },
-                { label: "United States", value: 1200 },
-                { label: "United Kingdom", value: 1380 },
+                { label: "Boldumsaz", value: 400 },
+                { label: "Bereket", value: 430 },
+                { label: "Koneurgench", value: 448 },
+                { label: "Gorogly", value: 470 },
+                { label: "Ashgabat", value: 540 },
+                { label: "Ahal", value: 580 },
+                { label: "Lebap", value: 690 },
+                { label: "Mary", value: 1100 },
+                { label: "Balkan", value: 1200 },
+                { label: "Dashouguz", value: 1380 },
               ]}
             />
           </Grid>

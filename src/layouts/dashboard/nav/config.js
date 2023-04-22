@@ -25,17 +25,17 @@ const icon = (name) => {
 
 const navConfig = [
   {
-    title: "dashboard",
+    title: "home",
     path: "/dashboard/app",
     icon: icon("dashboard"),
   },
   {
-    title: "Söwda Nokatlary",
+    title: "cellPoint",
     path: "/dashboard/cellPoints",
     icon: icon("cellPoint"),
   },
   {
-    title: "History",
+    title: "history",
     path: "/dashboard/history",
     icon: icon("history"),
   },

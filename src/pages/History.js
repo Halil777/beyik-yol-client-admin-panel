@@ -7,7 +7,9 @@ export default function History() {
   return (
     <>
       <Helmet>
-        <title>Söwda Nokatlary | Taryh</title>
+        <title>
+          {t("history")} | {t("TmChat")}
+        </title>
       </Helmet>
       <Typography>{t("home")}</Typography>
     </>

@@ -23,6 +23,7 @@ import {
   TablePagination,
 } from "@mui/material";
 // components
+import { useTranslation } from "react-i18next";
 import Label from "../components/label";
 import Iconify from "../components/iconify";
 import Scrollbar from "../components/scrollbar";
@@ -77,6 +78,8 @@ function applySortFilter(array, comparator, query) {
 }
 
 export default function CellPoints() {
+  const { t } = useTranslation();
+
   const [open, setOpen] = useState(null);
 
   const [page, setPage] = useState(0);
@@ -156,11 +159,12 @@ export default function CellPoints() {
   );
 
   const isNotFound = !filteredUsers.length && !!filterName;
-
   return (
     <>
       <Helmet>
-        <title> Söwda Nokatlary | Tm Çat Admin </title>
+        <title>
+          {t("cellPoint")} | {t("TmChat")}
+        </title>
       </Helmet>
 
       <Container>
@@ -171,13 +175,13 @@ export default function CellPoints() {
           mb={5}
         >
           <Typography variant="h4" gutterBottom>
-            Söwda Nokatlary
+            {t("cellPoint")}
           </Typography>
           <Button
             variant="contained"
             startIcon={<Iconify icon="eva:plus-fill" />}
           >
-            Söwda Nokat Goşmak
+            {t("addCellPoint")}
           </Button>
         </Stack>
 
@@ -189,8 +193,8 @@ export default function CellPoints() {
           />
 
           <Scrollbar>
-            <TableContainer sx={{ minWidth: 800 }}>
-              <Table>
+            <TableContainer sx={{ minWidth: 800, overflowX: "auto" }}>
+              <Table sx={{ minWidth: 750 }}>
                 <UserListHead
                   order={order}
                   orderBy={orderBy}
@@ -340,12 +344,14 @@ export default function CellPoints() {
       >
         <MenuItem>
           <Iconify icon={"eva:edit-fill"} sx={{ mr: 2 }} />
-          Edit
+          {/* {t("edit)} */}
+          edit
         </MenuItem>
 
         <MenuItem sx={{ color: "error.main" }}>
           <Iconify icon={"eva:trash-2-outline"} sx={{ mr: 2 }} />
-          Delete
+          {/* {t('delete')} */}
+          delete
         </MenuItem>
       </Popover>
     </>

@@ -3,6 +3,7 @@ import { NavLink as RouterLink } from "react-router-dom";
 // @mui
 import { Box, List, ListItemText } from "@mui/material";
 //
+import { useTranslation } from "react-i18next";
 import { StyledNavItem, StyledNavItemIcon } from "./styles";
 
 // ----------------------------------------------------------------------
@@ -31,7 +32,7 @@ NavItem.propTypes = {
 
 function NavItem({ item }) {
   const { title, path, icon, info } = item;
-
+  const { t } = useTranslation();
   return (
     <StyledNavItem
       component={RouterLink}
@@ -46,7 +47,7 @@ function NavItem({ item }) {
     >
       <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon>
 
-      <ListItemText disableTypography primary={title} />
+      <ListItemText disableTypography primary={t(title)} />
 
       {info && info}
     </StyledNavItem>

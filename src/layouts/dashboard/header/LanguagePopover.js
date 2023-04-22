@@ -37,11 +37,13 @@ export default function LanguagePopover() {
   const handleLanguageChange = (language) => {
     setLanguage(language);
     i18n.changeLanguage(language);
+    setOpen(null);
   };
   return (
     <>
       <IconButton
         onClick={handleOpen}
+        onMouseEnter={handleOpen}
         sx={{
           padding: 0,
           width: 44,
